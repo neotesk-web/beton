@@ -1,0 +1,253 @@
+/*
+    Beton, An art gallery template.
+    Open-Source, WTFPL License.
+
+    Copyright (C) 2025-20xx Neotesk
+*/
+
+/* Imports */
+@import url( ../font/fonts.css );
+@import url( 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gravitas+One&display=swap' );
+
+/* Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "EB Garamond", serif;
+}
+
+/* Background */
+body {
+    background-image: url( ../img/background.png );
+    overflow-x: hidden;
+}
+
+/* Macros */
+div.container {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+section > .container {
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+
+div.row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+div.row > * {
+    width: 0%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+/* Top Navigation */
+nav.top-nav > .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+
+nav.top-nav > .container > img.logo {
+    height: 30px;
+}
+
+nav.top-nav > .container > div.nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+nav.top-nav > .container > div.nav-list > a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-family: "Basement Grotesque"
+}
+
+nav.top-nav > .container > div.nav-list > a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+section#hero > .container {
+    padding-bottom: 40px;
+}
+
+section#hero h1.title {
+    font-size: 172px;
+    font-family: "Basement Grotesque";
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+section#hero div.row > a > img {
+    border: 5px solid black;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+/* About us */
+section#about-us h1.title {
+    font-size: 76px;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    font-family: "Gravitas One";
+    border: 3px dashed black;
+    width: 100%;
+}
+
+section#about-us p.para {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* Gallery */
+section#gallery h1.title {
+    font-size: 73px;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    font-family: "Gravitas One";
+    border: 3px dashed black;
+    width: 100%;
+}
+
+section#gallery div.row {
+    margin-top: 20px;
+}
+
+section#gallery div.row > a {
+    width: 30%;
+    flex-shrink: 0;
+}
+
+section#gallery div.row > a > img {
+    border: 5px solid black;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+/* Contacts */
+section#contact > div.container div.wrapper {
+    border: 3px dashed black;
+    padding: 40px;
+}
+
+section#contact h1.title {
+    font-size: 150px;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    font-family: "Basement Grotesque";
+    width: 100%;
+}
+
+section#contact p.contacts {
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+section#contact p.contacts a {
+    color: black;
+}
+
+/* Footer */
+footer > .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+footer > .container > img.logo {
+    height: 30px;
+}
+footer > div.container > p {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+footer > div.container > p span, footer > div.container > p a {
+    font-size: 12px;
+    font-family: "Basement Grotesque";
+    color: black;
+}
+
+@media screen and ( max-width: 1210px ) {
+    section#hero h1.title {
+        font-size: calc( 14.85vw - 10px );
+        text-align: center;
+    }
+    section#about-us h1.title {
+        font-size: calc( 7.1vw - 10px );
+        text-align: center;
+    }
+    section#gallery h1.title {
+        font-size: calc( 6.9vw - 10px );
+        text-align: center;
+    }
+    section#contact h1.title {
+        font-size: calc( 12.9vw - 10px );
+    }
+}
+
+@media screen and ( max-width: 850px ) {
+    section#gallery div.row > a {
+        width: 40%;
+        flex-shrink: 0;
+    }
+    section#about-us h1.title {
+        font-size: 50px;
+        text-align: center;
+    }
+    section#gallery h1.title {
+        font-size: 50px;
+        text-align: center;
+    }
+    section#contact p.contacts {
+        font-size: calc( 8.9vw - 10px );
+    }
+    footer > div.container > p {
+        flex-direction: column;
+        gap: 2px;
+    }
+}
+
+@media screen and ( max-width: 600px ) {
+    nav.top-nav > .container > div.nav-list > a {
+        font-size: 14px;
+    }
+    nav.top-nav > .container > div.nav-list {
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 5px;
+        justify-content: end;
+    }
+    .logo {
+        height: 20px!important;
+    }
+}
